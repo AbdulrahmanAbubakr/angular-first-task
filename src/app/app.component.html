@@ -1,19 +1,6 @@
 <app-nav></app-nav>
 
-<div class="row">
-    <div class="card col-4 " *ngFor="let item of products">
-        <div class="card-body">
-            <img [src]="item.img" class="card-img-top" [alt]="item.name">
-            <h5 class="card-title">{{item.name}} </h5>
-            <p class="card-text">Price: {{item.price}} </p>
-            <h4 *ngIf="item.quantity ==0" class="text-danger">Out of stock</h4>
-            <h4 *ngIf="item.quantity ==1" class="text-warning">product is about to finish</h4>
-
-        </div>
-    </div>
-</div>
-
-
+<router-outlet></router-outlet>
 
 
 <app-footer></app-footer>
