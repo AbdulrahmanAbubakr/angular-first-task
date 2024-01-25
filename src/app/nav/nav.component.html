@@ -1,11 +1,12 @@
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container">
         <a class="navbar-brand text-light" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse " id="navbarNavDropdown">
+        <div class="collapse navbar-collapse text-light " id="navbarNavDropdown">
             <ul class="navbar-nav ">
                 <li class="nav-item ">
                     <a class="nav-link active text-light" aria-current="page" routerLink="/home">Home</a>
@@ -14,13 +15,16 @@
                     <a class="nav-link text-light" routerLink="/products">products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" routerLink="/login">login</a>
+                    <a class="nav-link text-light" *ngIf="!isLoggedIn" routerLink="/login">login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" routerLink="/signup">signup</a>
+                    <a class="nav-link text-light" *ngIf="!isLoggedIn" routerLink="/signup">signup</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" routerLink="/cart">cart {{count}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" *ngIf="isLoggedIn" (click)="logOut()">logout</a>
                 </li>
 
             </ul>
