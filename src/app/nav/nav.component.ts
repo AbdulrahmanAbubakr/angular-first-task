@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsListService } from '../services/products-list.service';
 import { CartListService } from '../services/cart-list.service';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -14,7 +15,8 @@ export class NavComponent implements OnInit {
   constructor(
     private cartService: CartListService,
     private _prodService: ProductsListService,
-    private authSevice: AuthService
+    private authSevice: AuthService,
+    private router: Router
   ) {
     this.cartService.cartSubject.subscribe((value) => {
       this.count = value.length;
@@ -27,6 +29,7 @@ export class NavComponent implements OnInit {
     });
   }
   logOut() {
-    this.authSevice.logOut;
+    this.authSevice.logOut();
+    this.router.navigate([]);
   }
 }

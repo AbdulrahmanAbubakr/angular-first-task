@@ -24,7 +24,7 @@
                     <a class="nav-link text-light" routerLink="/cart">cart {{count}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" *ngIf="isLoggedIn" (click)="logOut()">logout</a>
+                    <button class="nav-link text-light" *ngIf="isLoggedIn" (click)="logOut()">logout</button>
                 </li>
 
             </ul>
