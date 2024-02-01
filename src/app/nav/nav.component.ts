@@ -30,6 +30,6 @@ export class NavComponent implements OnInit {
   }
   logOut() {
     this.authSevice.logOut();
-    this.router.navigate([]);
+    this.router.navigateByUrl('/');
   }
 }

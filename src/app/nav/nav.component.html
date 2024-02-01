@@ -9,19 +9,19 @@
         <div class="collapse navbar-collapse text-light " id="navbarNavDropdown">
             <ul class="navbar-nav ">
                 <li class="nav-item ">
-                    <a class="nav-link active text-light" aria-current="page" routerLink="/home">Home</a>
+                    <button class="nav-link active text-light" aria-current="page" routerLink="/home">Home</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" routerLink="/products">products</a>
+                    <button class="nav-link text-light" routerLink="/products">products</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" *ngIf="!isLoggedIn" routerLink="/login">login</a>
+                    <button class="nav-link text-light" *ngIf="!isLoggedIn" routerLink="/login">login</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" *ngIf="!isLoggedIn" routerLink="/signup">signup</a>
+                    <button class="nav-link text-light" *ngIf="!isLoggedIn" routerLink="/signup">signup</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" routerLink="/cart">cart {{count}}</a>
+                    <button class="nav-link text-light" routerLink="/cart">cart {{count}}</button>
                 </li>
                 <li class="nav-item">
                     <button class="nav-link text-light" *ngIf="isLoggedIn" (click)="logOut()">logout</button>
